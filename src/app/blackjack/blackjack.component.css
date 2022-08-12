@@ -1,0 +1,58 @@
+.mat-grid-list .mat-card{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.8em;
+}
+.mat-grid-list .mat-card-image{
+    /* height: 100%;
+    width: 100%; */
+    border-radius: 0.8em;
+} 
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    color: white;
+    height: 15%;
+    width: 103%;
+    border-radius: 0.8em 0.8em 0em 0em;
+    background-color: #373737;
+    opacity: 0.7;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 16px;
+  }
+ 
+  .top-ribbon{
+    height: 57%;
+    width: 72%;
+    position: absolute;
+    top: 26%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+  }
+
+  .new-ribbon{
+    height: 57%;
+    width: 72%;
+    position: absolute;
+    top: 26%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+  }
+  .text-block {
+    position: absolute;
+    bottom: 30%;
+    right: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .mat-icon {
+    font-size: 26px;
+  }

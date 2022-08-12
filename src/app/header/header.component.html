@@ -1,0 +1,34 @@
+<!-- 2. Allow the user to navigate between categories, with an “active” state for the selected category.  -->
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button [matMenuTriggerFor]="menu" fxShow=true fxHide.gt-sm=true>
+        <mat-icon>menu</mat-icon>
+    </button>
+    
+    <mat-menu #menu="matMenu">
+        <a mat-menu-item [routerLink]="['/top-games']">Top Games </a>
+        <a mat-menu-item [routerLink]="['/new-games']">New Games </a>
+        <a mat-menu-item [routerLink]="['/slots']">Slots </a>
+        <a mat-menu-item [routerLink]="['/jackpots']">Jackpots </a>
+        <a mat-menu-item [routerLink]="['/live']"> Live</a>
+        <a mat-menu-item [routerLink]="['/blackjack']"> Blackjack </a>
+        <a mat-menu-item [routerLink]="['/roulette']"> Roulette </a>
+        <a mat-menu-item [routerLink]="['/table']"> Table </a>
+        <a mat-menu-item [routerLink]="['/poker']"> Poker </a>
+        <a mat-menu-item [routerLink]="['/other']"> Other </a>
+    </mat-menu>
+
+      <mat-nav-list fxShow=true fxHide.lt-md fxLayoutGap="30px">
+        <a mat-list-item [routerLink]="['/top-games']" routerLinkActive="active"><h1> Top Games </h1></a>
+        <a mat-list-item [routerLink]="['/new-games']" routerLinkActive="active"><h1> New Games </h1></a>
+        <a mat-list-item [routerLink]="['/slots']" routerLinkActive="active"><h1> Slots </h1></a>
+        <a mat-list-item [routerLink]="['/jackpots']" routerLinkActive="active"><h1> Jackpots </h1></a>
+        <a mat-list-item [routerLink]="['/live']" routerLinkActive="active"><h1> Live </h1></a>
+        <a mat-list-item [routerLink]="['/blackjack']" routerLinkActive="active"><h1> Blackjack </h1></a>
+        <a mat-list-item [routerLink]="['/roulette']" routerLinkActive="active"><h1> Roulette </h1></a>
+        <a mat-list-item [routerLink]="['/table']" routerLinkActive="active"><h1> Table </h1></a>
+        <a mat-list-item [routerLink]="['/poker']" routerLinkActive="active"><h1> Poker </h1></a>
+        <a mat-list-item [routerLink]="['/other']" routerLinkActive="active"><h1> Other </h1></a>
+      </mat-nav-list>
+  </mat-toolbar-row>
+</mat-toolbar>

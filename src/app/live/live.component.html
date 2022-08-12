@@ -1,0 +1,25 @@
+<!-- 1. Lay out the games according to the design, with responsive in mind -->
+<mat-grid-list cols="5" rowHeight="200px" fxFlexFill *ngIf="live_games">
+    <mat-grid-tile *ngFor="let game of live_games;let indexOfelement=index;">
+        <mat-card class="example-card" fxFlexFill>
+            <mat-card-content (mouseover)="showPlayIcon[indexOfelement]=true" (mouseout)="
+            showPlayIcon[indexOfelement]=false">
+                <div class="container">
+                    <img mat-card-image [src]="game.image" [alt]="game.name" [title]="game.name">   
+                    <!-- 3. Show the current jackpot for appropriate games when the page is rendered -->
+                    <div class="centered" *ngIf="game.amount"><b>£{{game.amount}}</b></div>
+                    <!-- 5. “new” and “top” ribbons -->
+                    <img src="../../assets/img/top-ribbon.png" class="top-ribbon" *ngIf="game.top">
+                    <img src="../../assets/img/new-ribbon.png" class="new-ribbon" *ngIf="game.new">
+                    <!-- 6. Only for the web: Hovering on a game brings up the “play” button and game name. (clicking does nothing) -->
+                    <div class="text-block" fxShow=true fxHide.lt-md>
+                        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" *ngIf="showPlayIcon[indexOfelement]">
+                            <mat-icon>play_circle_filled</mat-icon>
+                        </button> 
+                    </div>
+                </div>
+            </mat-card-content>
+            
+        </mat-card>
+    </mat-grid-tile>  
+</mat-grid-list>
